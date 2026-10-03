@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+
+<!-- Thymeleaf CSS -->
+<link rel="stylesheet" th:href="@{/css/FAQ.css}">
+
+</head>
+<body>
+
+<div class="header">
+    <h2>❓ Frequently Asked Questions</h2>
+</div>
+
+<div class="container">
+
+    <!-- FAQ 1 -->
+    <div class="accordion">
+        <div class="accordion-header">How to add a patient?</div>
+        <div class="accordion-body">
+            Go to "Add Patient" page → Fill details → Click Save.
+        </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="accordion">
+        <div class="accordion-header">How to generate report?</div>
+        <div class="accordion-body">
+            Open patient → Click "Create Report" → Download PDF.
+        </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="accordion">
+        <div class="accordion-header">How to upload report?</div>
+        <div class="accordion-body">
+            Go to Upload Report section → Select PDF → Submit.
+        </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="accordion">
+        <div class="accordion-header">How to contact support?</div>
+        <div class="accordion-body">
+            Email: <span th:text="'dhavalevijay46@gmail.com'"></span><br>
+            Phone: <span th:text="'+91 8380916639'"></span>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Shiv Laboratories</h2>
+        <p class="copyright">
+            © 2026 Shiv Laboratories | Developed by Vijay Dhavale
+        </p>
+    </div>
+</footer>
+<script>
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(acc => {
+    acc.addEventListener("click", () => {
+        acc.classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>

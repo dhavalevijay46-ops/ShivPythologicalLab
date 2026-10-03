@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiv Laboratories | Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/css/Report.css}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a th:href="@{/report}" class="logo">
+            <span class="logo-icon">✚</span>
+            <span> <strong>Shiv Laboratories</strong></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <!-- PATIENT -->
+            <div class="dropdown">
+                <button class="drop-btn" type="button">
+                    Patients <span>▾</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a th:href="@{/addpatient}">Add Patient</a>
+                    <a th:href="@{/patients}">View Patients</a>
+                    <a th:href="@{/history}">Patient History</a>
+                </div>
+            </div>
+
+            <!-- REPORT -->
+            <div class="dropdown">
+                <button class="drop-btn" type="button">
+                    Reports <span>▾</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a th:href="@{/PdfReport}">Create Report</a>
+                    <a th:href="@{/reportlist}">Saved Reports</a>
+                    <a th:href="@{/downloadReport}">Download Report</a>
+                </div>
+            </div>
+
+            <!-- HELP -->
+            <div class="dropdown">
+                <button class="drop-btn" type="button">
+                    Help <span>▾</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a th:href="@{/help}">Contact Us</a>
+                    <a th:href="@{/FAQ}">FAQs</a>
+                </div>
+            </div>
+
+            <!-- STATUS -->
+            <div class="dropdown">
+                <button class="drop-btn" type="button">
+                    Payments <span>▾</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a th:href="@{/payment}">Payment History</a>
+                </div>
+            </div>
+
+            <a th:href="@{/index}" class="logout-btn">Logout ↗</a>
+
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="welcome-badge">
+                    <span class="status-dot"></span>
+                    Welcome to Shiv Laboratories
+                </span>
+
+                <h1>
+                    Your Health,<br>
+                    <span>Our Priority.</span>
+                </h1>
+
+                <h2>Sagar Dhavale</h2>
+
+                <p>
+                    Precision in every test, trust in every result.
+                    Shiv Laboratories stands for quality healthcare
+                    diagnostics and reliable patient care.
+                </p>
+
+                <div class="hero-buttons">
+                    <a th:href="@{/addpatient}" class="primary-btn">
+                        + Add New Patient
+                    </a>
+
+                    <a th:href="@{/patients}" class="secondary-btn">
+                        View Patients →
+                    </a>
+                </div>
+
+                <div class="trust-info">
+                    <span>✓ Reliable Diagnostics</span>
+                    <span>✓ Patient-Focused Care</span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="visual-card">
+                    <div class="visual-icon">🔬</div>
+
+                    <h3>Shiv Laboratories</h3>
+
+                    <p>Care • Accuracy • Trust</p>
+
+                    <div class="visual-divider"></div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">✓</span>
+                        <div>
+                            <strong>Quality Testing</strong>
+                            <small>Focused on reliable results</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">♡</span>
+                        <div>
+                            <strong>Patient Care</strong>
+                            <small>Your health matters to us</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">✚</span>
+                        <div>
+                            <strong>Trusted Service</strong>
+                            <small>Supporting better healthcare</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-badge">
+                    <span>✚</span>
+                    <div>
+                        <strong>Healthcare</strong>
+                        <small>With a personal touch</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK ACCESS -->
+        <section class="quick-section">
+
+            <div class="section-heading">
+                <span class="section-label">QUICK ACCESS</span>
+                <h2>Manage Your Laboratory</h2>
+                <p>Access patient records, reports, and services from one place.</p>
+            </div>
+
+            <div class="quick-grid">
+
+                <a th:href="@{/addpatient}" class="quick-card">
+                    <div class="quick-icon">＋</div>
+                    <h3>Add Patient</h3>
+                    <p>Register a new patient and enter their details.</p>
+                    <span class="card-link">Get Started →</span>
+                </a>
+
+                <a th:href="@{/patients}" class="quick-card">
+                    <div class="quick-icon">♙</div>
+                    <h3>Patient Records</h3>
+                    <p>View and manage patient information.</p>
+                    <span class="card-link">View Records →</span>
+                </a>
+
+                <a th:href="@{/PdfReport}" class="quick-card">
+                    <div class="quick-icon">▤</div>
+                    <h3>Create Report</h3>
+                    <p>Prepare and generate patient test reports.</p>
+                    <span class="card-link">Create Report →</span>
+                </a>
+
+                <a th:href="@{/payment}" class="quick-card">
+                    <div class="quick-icon">₹</div>
+                    <h3>Payments</h3>
+                    <p>Access payment history and transaction records.</p>
+                    <span class="card-link">View Payments →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about-section">
+
+            <div class="about-icon">🔬</div>
+
+            <div class="about-content">
+                <span class="section-label">ABOUT OUR LAB</span>
+                <h2>Precision in Every Test</h2>
+
+                <p>
+                    At Shiv Laboratories, we believe that accurate
+                    diagnostics and dependable service are essential
+                    for better healthcare. Our focus is on maintaining
+                    organized patient records and providing convenient
+                    access to laboratory reports.
+                </p>
+
+                <a th:href="@{/FAQ}" class="about-link">
+                    Have Questions? Visit our FAQs →
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <a th:href="@{/report}" class="footer-logo">
+                ✚ Shiv Laboratories
+            </a>
+
+            <p>
+                Precision in every test, trust in every result.
+            </p>
+
+            <div class="footer-bottom">
+                <p>© 2026 Shiv Laboratories | Developed by Vijay Dhavale</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- DROPDOWN AND MOBILE MENU SCRIPT -->
+    <script>
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        // Mobile navigation
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("show");
+        });
+
+        // Dropdown functionality
+        document.querySelectorAll(".drop-btn").forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation();
+
+                const parent = this.parentElement;
+
+                dropdowns.forEach(dropdown => {
+                    if (dropdown !== parent) {
+                        dropdown.classList.remove("active");
+                    }
+                });
+
+                parent.classList.toggle("active");
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest(".dropdown")) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove("active");
+                });
+            }
+        });
+
+        // Close mobile menu when a link is selected
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("show");
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Patient | Shiv Lab</title>
+
+    <link rel="stylesheet" th:href="@{/css/editData.css}">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">✚</div>
+
+                <div>
+                    <h2>Shiv Lab</h2>
+                    <p>Pathology Laboratory</p>
+                </div>
+            </div>
+
+            <a th:href="@{/report}" class="home-link">
+                ← Home
+            </a>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="form-card">
+
+                <!-- Form Heading -->
+                <div class="form-header">
+
+                    <div class="icon-box">✏️</div>
+
+                    <h1>Edit Patient Details</h1>
+
+                    <p>
+                        Update the patient information below
+                        and save your changes.
+                    </p>
+
+                </div>
+
+                <!-- Edit Patient Form -->
+                <form th:action="@{/update}"
+                      th:object="${p}"
+                      method="post"
+                      class="form-box">
+
+                    <!-- Patient ID -->
+                    <input type="hidden" th:field="*{id}">
+
+                    <div class="form-group">
+
+                        <label for="name">Patient Name</label>
+
+                        <input type="text"
+                               id="name"
+                               th:field="*{name}"
+                               placeholder="Enter patient name"
+                               required>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="age">Age</label>
+
+                            <input type="number"
+                                   id="age"
+                                   th:field="*{age}"
+                                   placeholder="Enter age"
+                                   min="0"
+                                   max="120"
+                                   required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="gender">Gender</label>
+
+                            <select id="gender"
+                                    th:field="*{gender}"
+                                    required>
+
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input type="tel"
+                               id="phone"
+                               th:field="*{phone}"
+                               placeholder="Enter 10-digit phone number"
+                               pattern="[0-9]{10}"
+                               maxlength="10"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="type">Patient Type / Referred By</label>
+
+                        <select id="type"
+                                th:field="*{type}"
+                                required>
+
+                            <option value="Self">Self</option>
+                            <option value="Dr.Joshi">Dr. Joshi</option>
+                            <option value="Dr.Dhavale">Dr. Dhavale</option>
+                            <option value="Dr.Khatke">Dr. Khatke</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="status">Patient Status</label>
+
+                        <select id="status"
+                                th:field="*{status}"
+                                required>
+
+                            <option value="Active">Active</option>
+                            <option value="Completed">Completed</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="button-group">
+
+                        <button type="submit" class="update-btn">
+                            ✓ Update Patient
+                        </button>
+
+                        <a th:href="@{/report}" class="cancel-btn">
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </form>
+
+                <div class="footer-note">
+                    Shiv Lab Patient Management System
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

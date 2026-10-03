@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiv Laboratories | Quality Diagnostics</title>
+
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <a th:href="@{/}" class="brand">
+            <div class="brand-icon">✚</div>
+
+            <div class="brand-text">
+                <h2>Shiv Laboratories</h2>
+                <span>Pathology & Diagnostics</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#About">About</a>
+            <a href="#Feature">Services</a>
+            <a href="#Review">Reviews</a>
+            <a href="#Contact">Contact</a>
+
+            <a th:href="@{/Login}" class="login-btn">
+                Login →
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="images">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                YOUR HEALTH, OUR PRIORITY
+            </span>
+
+            <h1>
+                Accurate Diagnostics.<br>
+                <span>Better Healthcare.</span>
+            </h1>
+
+            <p class="hero-description">
+                Shiv Laboratories is committed to delivering
+                accurate diagnostic testing, reliable reports,
+                and quality healthcare services you can trust.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#Feature" class="primary-btn">
+                    Explore Our Services →
+                </a>
+
+                <a href="#Contact" class="secondary-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+                <span>✓</span>
+                Precision in every test, trust in every result
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="About" class="about-section">
+
+        <div class="section-heading">
+            <span class="section-tag">ABOUT OUR LAB</span>
+
+            <h2>Care You Can Trust</h2>
+
+            <p>
+                Dedicated to accurate testing and dependable
+                diagnostic services for a healthier life.
+            </p>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg"
+                    alt="Medical laboratory professional">
+
+                <div class="image-label">
+                    <span>✚</span>
+                    <div>
+                        <strong>Shiv Laboratories</strong>
+                        <p>Quality Healthcare Diagnostics</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <h3>
+                    Precision in every test, trust in every result.
+                </h3>
+
+                <p>
+                    Shiv Laboratories, led by Sagar Dhavale,
+                    is dedicated to providing reliable diagnostic
+                    services with a focus on quality, accuracy,
+                    and patient care.
+                </p>
+
+                <p>
+                    Our commitment is to support better healthcare
+                    through dependable testing and timely reports.
+                </p>
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        <span>✓</span>
+                        <p>Accurate and reliable diagnostic testing</p>
+                    </div>
+
+                    <div class="about-point">
+                        <span>✓</span>
+                        <p>Modern laboratory technology</p>
+                    </div>
+
+                    <div class="about-point">
+                        <span>✓</span>
+                        <p>Patient-focused healthcare services</p>
+                    </div>
+
+                    <div class="about-point">
+                        <span>✓</span>
+                        <p>Timely and dependable reports</p>
+                    </div>
+
+                </div>
+
+                <a href="#Contact" class="about-btn">
+                    Get in Touch →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features / Services Section -->
+    <section id="Feature" class="features-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">WHAT WE OFFER</span>
+
+            <h2>Our Diagnostic Services</h2>
+
+            <p>
+                Supporting your healthcare needs with
+                reliable laboratory services.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3>Diagnostic Testing</h3>
+                <p>
+                    Laboratory testing services to support
+                    healthcare professionals and patients.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Reliable Lab Reports</h3>
+                <p>
+                    Organized and accessible diagnostic
+                    reports for patient reference.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Online Report Access</h3>
+                <p>
+                    Convenient digital report management
+                    through our laboratory system.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👨‍⚕️</div>
+                <h3>Professional Care</h3>
+                <p>
+                    Patient-focused services and support
+                    from laboratory professionals.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Home Sample Collection</h3>
+                <p>
+                    Home sample collection facility,
+                    subject to service availability.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>Modern Equipment</h3>
+                <p>
+                    Laboratory equipment and procedures
+                    designed to support diagnostic testing.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Health Checkup Packages</h3>
+                <p>
+                    Health checkup options to support
+                    routine healthcare needs.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Hygiene & Safety</h3>
+                <p>
+                    Attention to hygiene and safe
+                    laboratory practices.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Patient Reviews Section -->
+    <section id="Review" class="review-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">PATIENT FEEDBACK</span>
+
+            <h2>Patient Reviews</h2>
+
+            <p>
+                Patient experiences and feedback matter to us.
+            </p>
+
+        </div>
+
+        <div class="review-container">
+
+            <div class="review-image">
+
+                <img
+                    src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg"
+                    alt="Healthcare professional assisting a patient">
+
+            </div>
+
+            <div class="review-content">
+
+                <div class="quote-icon">“</div>
+
+                <h3>
+                    Very accurate reports and quick service.
+                    Highly recommended!
+                </h3>
+
+                <div class="review-rating">
+                    <span>★★★★★</span>
+                    <p>Patient Feedback</p>
+                </div>
+
+                <div class="review-author">
+                    <div class="author-icon">P</div>
+
+                    <div>
+                        <strong>Our Patient</strong>
+                        <p>Shiv Laboratories</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="Contact" class="contact-section">
+
+        <div class="section-heading">
+
+            <span class="section-tag">GET IN TOUCH</span>
+
+            <h2>Contact Shiv Laboratories</h2>
+
+            <p>
+                Have questions about our services?
+                Get in touch with our laboratory.
+            </p>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>We're Here to Help</h3>
+
+                <p class="contact-description">
+                    Contact us for laboratory information,
+                    patient assistance, and service enquiries.
+                </p>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <h4>Our Address</h4>
+                        <p>
+                            At Post Sapatane, Near Sakar Karkhana
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📞</div>
+
+                    <div>
+                        <h4>Phone Number</h4>
+                        <a href="tel:7558581554">
+                            7558581554
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">✉️</div>
+
+                    <div>
+                        <h4>Email Address</h4>
+                        <a href="mailto:sagardhavale@gmail.com">
+                            sagardhavale@gmail.com
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="contact-card">
+
+                <div class="contact-card-icon">✚</div>
+
+                <h3>Shiv Laboratories</h3>
+
+                <p>
+                    Precision in every test,<br>
+                    trust in every result.
+                </p>
+
+                <a th:href="@{/Login}" class="contact-login-btn">
+                    Patient / Staff Login →
+                </a>
+
+                <div class="contact-note">
+                    Laboratory Management System
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <span class="footer-logo">✚</span>
+
+                <div>
+                    <h2>Shiv Laboratories</h2>
+                    <p>Pathology & Diagnostics</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#About">About</a>
+                <a href="#Feature">Services</a>
+                <a href="#Review">Reviews</a>
+                <a href="#Contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Shiv Laboratories. All rights reserved.
+            </p>
+
+            <p>
+                Developed by <strong>Vijay Dhavale</strong>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

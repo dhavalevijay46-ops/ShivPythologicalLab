@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Shiv Laboratories</title>
+
+    <link rel="stylesheet" th:href="@{/css/SignUp.css}">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- Left Information Section -->
+        <section class="signup-info">
+
+            <div class="brand">
+                <div class="brand-icon">✚</div>
+                <h2>Shiv <span>Laboratories</span></h2>
+            </div>
+
+            <div class="info-content">
+
+                <span class="tag">LAB MANAGEMENT SYSTEM</span>
+
+                <h1>Join <span>Shiv Laboratories</span></h1>
+
+                <p>
+                    Create your account to access the laboratory
+                    management system and manage patient records
+                    and laboratory reports.
+                </p>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Manage Patient Information
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Access Laboratory Reports
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Simple Account Management
+                </div>
+
+            </div>
+
+            <div class="info-footer">
+                © 2026 Shiv Laboratories
+            </div>
+
+        </section>
+
+        <!-- Right Signup Section -->
+        <section class="signup-section">
+
+            <div class="signup-box">
+
+                <!-- Mobile Logo -->
+                <div class="mobile-logo">
+                    <div class="brand-icon">✚</div>
+                    <h2>Shiv <span>Laboratories</span></h2>
+                </div>
+
+                <!-- Heading -->
+                <div class="signup-heading">
+
+                    <span class="welcome-tag">GET STARTED</span>
+
+                    <h1>Create Account</h1>
+
+                    <p>
+                        Enter your details to register for an account.
+                    </p>
+
+                </div>
+
+                <!-- Signup Form -->
+                <form th:action="@{/Register}" method="post">
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter username"
+                            autocomplete="username"
+                            minlength="3"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword">
+                                Show
+                            </button>
+
+                        </div>
+
+                        <small class="password-hint">
+                            Use at least 8 characters for your password.
+                        </small>
+                    </div>
+
+                    <button type="submit" class="signup-btn">
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+                <!-- Login Link -->
+                <div class="login-link">
+
+                    <p>Already have an account?</p>
+
+                    <a th:href="@{/Login}">
+                        Login to your account
+                    </a>
+
+                </div>
+
+                <!-- Security Note -->
+                <div class="security-note">
+                    <span>🔒</span>
+                    Keep your account credentials private.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Show / Hide Password -->
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.textContent = "Hide";
+            } else {
+                passwordInput.type = "password";
+                togglePassword.textContent = "Show";
+            }
+
+        });
+    </script>
+
+</body>
+</html>

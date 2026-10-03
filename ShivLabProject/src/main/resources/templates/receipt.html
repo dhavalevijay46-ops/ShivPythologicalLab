@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Successful | Shiv Laboratories</title>
+
+    <link rel="stylesheet" th:href="@{/css/recipt.css}">
+</head>
+
+<body>
+
+    <main class="success-page">
+
+        <div class="success-card">
+
+            <!-- Laboratory Brand -->
+            <div class="brand">
+                <span class="brand-icon">✚</span>
+                <h2>Shiv <span>Laboratories</span></h2>
+            </div>
+
+            <!-- Success Icon -->
+            <div class="success-icon">
+                <span>✓</span>
+            </div>
+
+            <!-- Success Message -->
+            <span class="status-label">PAYMENT CONFIRMED</span>
+
+            <h1>Payment Successful!</h1>
+
+            <p class="message">
+                Your payment has been successfully completed.
+                Thank you for choosing Shiv Laboratories.
+            </p>
+
+            <!-- Receipt Information -->
+            <div class="receipt-info">
+
+                <div class="receipt-row">
+                    <span>Payment Status</span>
+                    <strong class="paid">Paid ✓</strong>
+                </div>
+
+                <div class="receipt-row">
+                    <span>Service</span>
+                    <strong>Laboratory Report</strong>
+                </div>
+
+            </div>
+
+            <p class="note">
+                Your payment is confirmed. You can view your payment
+                history or return to the order page.
+            </p>
+
+            <!-- Actions -->
+            <div class="action-buttons">
+
+                <a th:href="@{/order}" class="primary-btn">
+                    Go Back to Orders
+                </a>
+
+                <a th:href="@{/history}" class="secondary-btn">
+                    View Payment History
+                </a>
+
+            </div>
+
+            <div class="security-note">
+                🔒 Secure payment confirmation
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>✚ Shiv Laboratories</h3>
+        <p>© 2026 Shiv Laboratories | Developed by Vijay Dhavale</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient List | Shiv Laboratories</title>
+
+    <link rel="stylesheet" th:href="@{/css/PdfReport.css}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">✚</span>
+                <h2>Shiv <span>Laboratories</span></h2>
+            </div>
+
+            <a th:href="@{/report}" class="home-btn">
+                ← Home Page
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div>
+                <span class="tag">PATIENT MANAGEMENT</span>
+                <h1>Patient List</h1>
+                <p>View patient details and manage laboratory reports.</p>
+            </div>
+
+            <a th:href="@{/addPatient}" class="add-btn">
+                + Add Patient
+            </a>
+        </section>
+
+        <!-- Patient Count -->
+        <section class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <p>Total Patients</p>
+                    <h2 th:text="${#lists.size(patients)}">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Table -->
+        <section class="table-card">
+
+            <div class="table-heading">
+                <div>
+                    <h2>Registered Patients</h2>
+                    <p>Patient records and available actions</p>
+                </div>
+
+                <span class="record-badge"
+                      th:text="${#lists.size(patients)} + ' Records'">
+                    0 Records
+                </span>
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Test Type</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="p : ${patients}">
+
+                            <td class="patient-id"
+                                th:text="${p.id}">
+                                1
+                            </td>
+
+                            <td>
+                                <div class="patient-name">
+                                    <div class="avatar"
+                                         th:text="${p.name != null and !p.name.isEmpty() ? #strings.substring(p.name, 0, 1).toUpperCase() : 'P'}">
+                                        P
+                                    </div>
+
+                                    <span th:text="${p.name}">
+                                        Patient Name
+                                    </span>
+                                </div>
+                            </td>
+
+                            <td th:text="${p.age}">25</td>
+
+                            <td th:text="${p.gender}">Male</td>
+
+                            <td th:text="${p.phone}">0000000000</td>
+
+                            <td>
+                                <span class="type-badge"
+                                      th:text="${p.type}">
+                                    Blood Test
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-badge"
+                                      th:classappend="${p.status == 'Active'} ? ' active' : ' completed'"
+                                      th:text="${p.status}">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="action-buttons">
+
+                                    <a th:href="@{/reportpdf(id=${p.id})}"
+                                       class="action-btn report-btn">
+                                        View Report
+                                    </a>
+                                    
+                                    <a th:href="@{/delete(id=${p.id})}"
+                                       class="action-btn delete-btn"
+                                       onclick="return confirm('Are you sure you want to delete this patient?')">
+                                        Delete
+                                    </a>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <!-- Empty State -->
+                        <tr th:if="${#lists.isEmpty(patients)}">
+                            <td colspan="8" class="empty-state">
+                                <div class="empty-icon">📋</div>
+                                <h3>No Patients Found</h3>
+                                <p>There are currently no registered patients.</p>
+
+                                <a th:href="@{/addPatient}" class="add-btn">
+                                    + Register Patient
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <!-- Footer Note -->
+        <div class="page-note">
+            <span>🔒</span>
+            Patient information is confidential and should be handled securely.
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>✚ Shiv Laboratories</h3>
+        <p>© 2026 Shiv Laboratories | Developed by Vijay Dhavale</p>
+    </footer>
+
+</body>
+</html>

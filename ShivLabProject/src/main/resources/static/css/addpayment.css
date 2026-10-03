@@ -1,0 +1,451 @@
+
+/* =========================================
+   SHIV LABORATORIES - ADD PAYMENT
+   Premium Black & Teal Theme
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: #000000;
+    color: #ffffff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    color: #14b8a6;
+    font-size: 32px;
+}
+
+.logo h2 {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo h2 span {
+    color: #14b8a6;
+}
+
+.home-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background: #0f766e;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background: #14b8a6;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 50px auto;
+    flex: 1;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-block;
+    background: #ccfbf1;
+    color: #0f766e;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.heading h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 14px;
+}
+
+.heading p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   PAYMENT FORM CARD
+========================================= */
+
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.07);
+    transition: all 0.3s ease;
+}
+
+.form-card:hover {
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.1);
+}
+
+/* Form Header */
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 28px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.form-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #ccfbf1,
+        #99f6e4
+    );
+    color: #0f766e;
+    border-radius: 18px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.form-header h2 {
+    font-size: 23px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 11px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0d9488;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.12);
+}
+
+/* Dropdown */
+
+.form-group select {
+    cursor: pointer;
+    appearance: auto;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #dc2626;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.form-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 35px;
+}
+
+.save-btn,
+.cancel-btn {
+    flex: 1;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Save Button */
+
+.save-btn {
+    background: linear-gradient(
+        135deg,
+        #0d9488,
+        #0f766e
+    );
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(13, 148, 136, 0.2);
+}
+
+.save-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #0f766e,
+        #115e59
+    );
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.3);
+}
+
+.save-btn:active {
+    transform: scale(0.98);
+}
+
+/* Cancel Button */
+
+.cancel-btn {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+
+.cancel-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer h3 {
+    color: #14b8a6;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+    }
+
+    .logo-icon {
+        font-size: 27px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .form-card {
+        padding: 30px 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .logo {
+        gap: 7px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .logo-icon {
+        font-size: 23px;
+    }
+
+    .home-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 28px auto;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+    }
+
+    .heading p {
+        font-size: 14px;
+    }
+
+    .form-card {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+
+    .form-header {
+        gap: 13px;
+        padding-bottom: 22px;
+        margin-bottom: 25px;
+    }
+
+    .form-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 26px;
+    }
+
+    .form-header h2 {
+        font-size: 19px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 49px;
+        font-size: 14px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}

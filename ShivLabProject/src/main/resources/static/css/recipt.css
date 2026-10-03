@@ -1,0 +1,276 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Page */
+.success-page {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/* Success Card */
+.success-card {
+    width: 100%;
+    max-width: 520px;
+
+    background: white;
+    padding: 45px;
+
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+
+    text-align: center;
+
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #0d9488;
+    color: white;
+
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.brand h2 {
+    font-size: 21px;
+    color: #0f172a;
+}
+
+.brand h2 span {
+    color: #0d9488;
+}
+
+/* Success Icon */
+.success-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 25px;
+
+    background: #dcfce7;
+    border: 7px solid #f0fdf4;
+
+    border-radius: 50%;
+}
+
+.success-icon span {
+    font-size: 45px;
+    color: #16a34a;
+    font-weight: 700;
+}
+
+/* Heading */
+.status-label {
+    display: inline-block;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    padding: 7px 14px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.success-card h1 {
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.message {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Receipt Information */
+.receipt-info {
+    margin-top: 30px;
+    padding: 20px;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+    text-align: left;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 12px 0;
+
+    font-size: 14px;
+}
+
+.receipt-row + .receipt-row {
+    border-top: 1px dashed #cbd5e1;
+}
+
+.receipt-row span {
+    color: #64748b;
+}
+
+.receipt-row strong {
+    color: #0f172a;
+    text-align: right;
+}
+
+.receipt-row .paid {
+    color: #16a34a;
+}
+
+/* Note */
+.note {
+    margin: 25px 0;
+
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: block;
+    width: 100%;
+
+    padding: 14px 20px;
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #0d9488;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #0f766e;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: white;
+    color: #0d9488;
+
+    border: 1px solid #0d9488;
+}
+
+.secondary-btn:hover {
+    background: #f0fdfa;
+}
+
+/* Security Note */
+.security-note {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.footer h3 {
+    color: #5eead4;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+
+    .success-page {
+        padding: 25px 15px;
+    }
+
+    .success-card {
+        padding: 30px 22px;
+    }
+
+    .success-card h1 {
+        font-size: 25px;
+    }
+
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    .receipt-row {
+        font-size: 13px;
+    }
+}

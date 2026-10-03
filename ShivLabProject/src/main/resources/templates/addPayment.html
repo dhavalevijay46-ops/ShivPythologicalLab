@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Payment | Shiv Laboratories</title>
+
+    <link rel="stylesheet" th:href="@{/css/addPayment.css}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">✚</span>
+        <h2>Shiv <span>Laboratories</span></h2>
+    </div>
+
+    <a th:href="@{/payment}" class="home-btn">← Back</a>
+</header>
+
+<main class="container">
+
+    <section class="heading">
+        <span class="tag">PAYMENT MANAGEMENT</span>
+        <h1>Add New Payment</h1>
+        <p>Enter patient details and record a payment.</p>
+    </section>
+
+    <section class="form-card">
+
+        <div class="form-header">
+            <div class="form-icon">₹</div>
+            <div>
+                <h2>Payment Details</h2>
+                <p>Fill in the details below.</p>
+            </div>
+        </div>
+
+        <form th:action="@{/savePayment}"
+              th:object="${payment}"
+              method="post">
+
+            <div class="form-group">
+                <label for="patientId">Patient ID</label>
+
+                <input type="number"
+                       id="patientId"
+                       th:field="*{patientId}"
+                       min="1"
+                       placeholder="Enter patient ID"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+
+                <input type="text"
+                       id="patientName"
+                       th:field="*{patientName}"
+                       placeholder="Enter patient name"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Payment Amount (₹)</label>
+
+                <input type="number"
+                       id="amount"
+                       th:field="*{amount}"
+                       min="0.01"
+                       step="0.01"
+                       placeholder="Enter payment amount"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentDate">Payment Date</label>
+
+                <input type="date"
+                       id="paymentDate"
+                       th:field="*{paymentDate}"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Payment Status</label>
+
+                <select id="status"
+                        th:field="*{status}"
+                        required>
+
+                    <option value="">Select payment status</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Pending">Pending</option>
+
+                </select>
+            </div>
+
+            <p class="error-message"
+               th:if="${error}"
+               th:text="${error}">
+            </p>
+
+            <div class="form-buttons">
+
+                <button type="submit" class="save-btn">
+                    ✓ Save Payment
+                </button>
+
+                <a th:href="@{/payment}" class="cancel-btn">
+                    Cancel
+                </a>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <h3>✚ Shiv Laboratories</h3>
+    <p>© 2026 Shiv Laboratories | Developed by Vijay Dhavale</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Payment | Shiv Laboratories</title>
+
+    <link rel="stylesheet" th:href="@{/css/payment.css}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✚</span>
+            <h2>Shiv <span>Laboratories</span></h2>
+        </div>
+
+        <a th:href="@{/report}" class="home-btn">← Home</a>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <section class="page-heading">
+            <span class="tag">PAYMENT MANAGEMENT</span>
+
+            <h1>Daily Payment Collection</h1>
+
+            <p>Track and manage today's laboratory payments.</p>
+        </section>
+
+        <!-- Today's Payment Card -->
+        <section class="payment-card">
+
+            <div class="payment-icon">₹</div>
+
+            <p class="payment-label">Today's Total Collection</p>
+
+            <h2 class="amount">
+                ₹ <span th:text="${totalPayment}">0.00</span>
+            </h2>
+
+            <div >
+                <span class="status-dot"></span>
+                Payments collected today
+            </div>
+
+            <div >
+                <span>Shiv Laboratories</span>
+                <span>Daily Summary</span>
+            </div>
+
+        </section>
+
+        <!-- Payment Management Options -->
+        <section class="management-section">
+
+            <h2>Manage Payments</h2>
+
+            <p class="section-description">
+                Add new payments or view and manage existing payment records.
+            </p>
+
+            <div class="management-grid">
+
+                <!-- Add Payment -->
+                <div class="management-card">
+
+                    <div class="management-icon add-icon">＋</div>
+
+                    <h3>Add Payment</h3>
+
+                    <p>
+                        Record a new patient payment with amount and payment status.
+                    </p>
+
+                    <a th:href="@{/PaymentAdd}"
+                       class="action-btn add-btn">
+                        + Add Payment
+                    </a>
+
+
+                </div>
+
+                <!-- View Payments -->
+                <div class="management-card">
+
+                    <div class="management-icon view-icon">☷</div>
+
+                    <h3>View Payments</h3>
+
+                    <p>
+                        View all payment records, patient details, and payment history.
+                    </p>
+
+                    <a th:href="@{/addPayment}"
+                       class="action-btn view-btn">
+                        View Payments →
+                    </a>
+
+                </div>
+
+                <!-- Delete Payment -->
+                <div class="management-card">
+
+                    <div class="management-icon delete-icon">⌫</div>
+
+                    <h3>Delete Payment</h3>
+
+                    <p>
+                        Find a payment record and delete it from the payment history.
+                    </p>
+
+                    <a th:href="@{/paymentList}"
+                       class="action-btn delete-btn">
+                        Manage / Delete
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Information -->
+        <section class="info-card">
+
+            <div class="info-icon">📊</div>
+
+            <div>
+                <h3>Daily Collection Summary</h3>
+
+                <p>
+                    This amount represents the total successful payments
+                    received today, excluding pending payments.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>✚ Shiv Laboratories</h3>
+
+        <p>© 2026 Shiv Laboratories | Developed by Vijay Dhavale</p>
+
+    </footer>
+
+</body>
+</html>

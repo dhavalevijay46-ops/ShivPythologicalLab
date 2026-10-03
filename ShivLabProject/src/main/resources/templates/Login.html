@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Shiv Laboratories</title>
+
+    <!-- Reuse your existing SignUp CSS without changes -->
+    <link rel="stylesheet" th:href="@{/css/SignUp.css}">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- LEFT INFORMATION SECTION -->
+        <section class="signup-info">
+
+            <a th:href="@{/index}" class="brand"
+               style="text-decoration: none;">
+
+                <div class="brand-icon">✚</div>
+
+                <h2>
+                    Shiv <span>Laboratories</span>
+                </h2>
+
+            </a>
+
+            <div class="info-content">
+
+                <span class="tag">LAB MANAGEMENT SYSTEM</span>
+
+                <h1>
+                    Welcome Back to
+                    <span>Shiv Laboratories</span>
+                </h1>
+
+                <p>
+                    Manage patient records, laboratory reports,
+                    and test information securely through one
+                    convenient platform.
+                </p>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Easy Patient Management
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Laboratory Report Management
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    Simple and Secure Access
+                </div>
+
+            </div>
+
+            <div class="info-footer">
+                © 2026 Shiv Laboratories
+            </div>
+
+        </section>
+
+        <!-- RIGHT LOGIN SECTION -->
+        <section class="signup-section">
+
+            <div class="signup-box">
+
+                <!-- MOBILE LOGO -->
+                <a th:href="@{/index}"
+                   class="mobile-logo"
+                   style="text-decoration: none;">
+
+                    <div class="brand-icon">✚</div>
+
+                    <h2>
+                        Shiv <span>Laboratories</span>
+                    </h2>
+
+                </a>
+
+                <!-- LOGIN HEADING -->
+                <div class="signup-heading">
+
+                    <span class="welcome-tag">
+                        WELCOME BACK
+                    </span>
+
+                    <h1>Login to your account</h1>
+
+                    <p>
+                        Enter your credentials to access your dashboard.
+                    </p>
+
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form th:action="@{/Login}" method="post">
+
+                    <div class="form-group">
+
+                        <label for="username">Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="password">Password</label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword">
+
+                                Show
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- LOGIN MESSAGE -->
+                    <p class="msg"
+                       th:if="${msg != null}"
+                       th:text="${msg}"
+                       style="color: #dc2626; font-size: 13px; margin-bottom: 15px;">
+                    </p>
+
+                    <!-- LOGIN BUTTON -->
+                    <button type="submit" class="signup-btn">
+
+                        Login to Account
+
+                        <span>→</span>
+
+                    </button>
+
+                </form>
+
+                <!-- SIGNUP LINK -->
+                <div class="login-link">
+
+                    <p>Don't have an account?</p>
+
+                    <a th:href="@{/SignUp}">
+                        Create Account
+                    </a>
+
+                </div>
+
+                <!-- SECURITY NOTE -->
+                <div class="security-note">
+
+                    <span>🔒</span>
+
+                    Your account information is protected.
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- SHOW / HIDE PASSWORD -->
+    <script>
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+                togglePassword.textContent = "Hide";
+
+            } else {
+
+                passwordInput.type = "password";
+                togglePassword.textContent = "Show";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Payment List | Shiv Laboratories</title>
+</head>
+<body>
+
+<h1>Payment Records</h1>
+
+<a th:href="@{/payment}">Back to Payment Dashboard</a>
+<a th:href="@{/addPayment}">Add New Payment</a>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="p : ${payments}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.patientId}"></td>
+            <td th:text="${p.patientName}"></td>
+            <td th:text="${p.amount}"></td>
+            <td th:text="${p.status}"></td>
+            <td>
+                <a th:href="@{/deletePayment/{id}(id=${p.id})}"
+                   onclick="return confirm('Delete this payment?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

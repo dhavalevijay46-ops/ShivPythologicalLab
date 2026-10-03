@@ -1,0 +1,318 @@
+
+/* =========================
+   General Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* =========================
+   Page Container
+========================= */
+
+.page-container {
+    min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    width: 100%;
+    background: #ffffff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    background: #0d9488;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.logo h2 {
+    font-size: 22px;
+    color: #0f766e;
+}
+
+.logo p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 3px;
+}
+
+/* =========================
+   Home Link
+========================= */
+
+.home-link {
+    text-decoration: none;
+    background: #e6fffb;
+    color: #0f766e;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.home-link:hover {
+    background: #0d9488;
+    color: white;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+}
+
+/* =========================
+   Form Card
+========================= */
+
+.form-card {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   Form Header
+========================= */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    width: 65px;
+    height: 65px;
+    background: #ccfbf1;
+    color: #0f766e;
+    font-size: 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.form-header h1 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* =========================
+   Form Layout
+========================= */
+
+.form-box {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 9px;
+}
+
+/* =========================
+   Inputs and Selects
+========================= */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0d9488;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.update-btn,
+.cancel-btn {
+    flex: 1;
+    height: 50px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Update Button */
+
+.update-btn {
+    background: #0d9488;
+    color: #ffffff;
+    border: none;
+}
+
+.update-btn:hover {
+    background: #0f766e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+}
+
+/* Cancel Button */
+
+.cancel-btn {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.cancel-btn:hover {
+    background: #e2e8f0;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer-note {
+    text-align: center;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .home-link {
+        padding: 10px 13px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding: 25px 12px;
+    }
+
+    .form-card {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .form-header h1 {
+        font-size: 23px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .update-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

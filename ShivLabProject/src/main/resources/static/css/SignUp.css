@@ -1,0 +1,449 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* Main Layout */
+.signup-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Information Section */
+.signup-info {
+    width: 45%;
+
+    background: linear-gradient(145deg, #0f766e, #0d9488);
+    color: white;
+
+    padding: 45px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #0d9488;
+
+    border-radius: 12px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.brand h2 {
+    font-size: 23px;
+    color: white;
+}
+
+.brand h2 span {
+    color: #99f6e4;
+}
+
+/* Information Content */
+.info-content {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.tag {
+    display: inline-block;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #ccfbf1;
+
+    padding: 8px 14px;
+    border-radius: 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 25px;
+}
+
+.info-content h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.info-content h1 span {
+    color: #99f6e4;
+}
+
+.info-content > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e0f2f1;
+
+    margin-bottom: 35px;
+}
+
+/* Features */
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.feature span {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: #99f6e4;
+
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Footer */
+.info-footer {
+    color: #ccfbf1;
+    font-size: 13px;
+}
+
+/* Right Signup Section */
+.signup-section {
+    width: 55%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 25px;
+}
+
+/* Signup Card */
+.signup-box {
+    width: 100%;
+    max-width: 460px;
+
+    background: white;
+
+    padding: 45px;
+    border-radius: 18px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* Mobile Logo */
+.mobile-logo {
+    display: none;
+}
+
+/* Heading */
+.signup-heading {
+    margin-bottom: 32px;
+}
+
+.welcome-tag {
+    display: inline-block;
+
+    color: #0d9488;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+.signup-heading h1 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.signup-heading p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+
+    margin-bottom: 9px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: #f8fafc;
+    color: #0f172a;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus {
+    border-color: #0d9488;
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+/* Password */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 70px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #0d9488;
+    font-weight: 600;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #0f766e;
+}
+
+.password-hint {
+    display: block;
+    margin-top: 8px;
+
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Signup Button */
+.signup-btn {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #0d9488;
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #0f766e;
+    box-shadow: 0 6px 15px rgba(13, 148, 136, 0.2);
+}
+
+.signup-btn span {
+    font-size: 20px;
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    margin-top: 28px;
+
+    font-size: 14px;
+    color: #64748b;
+}
+
+.login-link a {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #0d9488;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Security Note */
+.security-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 30px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+    .signup-info {
+        width: 40%;
+        padding: 35px 4%;
+    }
+
+    .signup-section {
+        width: 60%;
+    }
+
+    .info-content h1 {
+        font-size: 34px;
+    }
+
+    .signup-box {
+        padding: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .signup-page {
+        flex-direction: column;
+    }
+
+    .signup-info {
+        display: none;
+    }
+
+    .signup-section {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 25px 18px;
+
+        background: linear-gradient(
+            135deg,
+            #ccfbf1,
+            #f1f5f9
+        );
+    }
+
+    .signup-box {
+        max-width: 480px;
+        padding: 35px 28px;
+    }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        margin-bottom: 35px;
+    }
+
+    .mobile-logo .brand-icon {
+        background: #0d9488;
+        color: white;
+    }
+
+    .mobile-logo h2 {
+        font-size: 21px;
+        color: #0f172a;
+    }
+
+    .mobile-logo h2 span {
+        color: #0d9488;
+    }
+
+    .signup-heading h1 {
+        font-size: 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+
+    .signup-section {
+        padding: 20px 12px;
+    }
+
+    .signup-box {
+        padding: 28px 20px;
+        border-radius: 14px;
+    }
+
+    .mobile-logo h2 {
+        font-size: 18px;
+    }
+
+    .signup-heading h1 {
+        font-size: 23px;
+    }
+}

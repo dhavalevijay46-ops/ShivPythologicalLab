@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Help</title>
+
+<!-- Thymeleaf CSS Link -->
+<link rel="stylesheet" th:href="@{/css/help.css}">
+
+</head>
+<body>
+
+<div class="header">
+    <h2>🧪 Lab Help & Support</h2>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h3>➤ How to Add Patient?</h3>
+        <p>Go to "Add Patient" page, fill details and click save.</p>
+    </div>
+
+    <div class="card">
+        <h3>➤ How to Generate Report?</h3>
+        <p>Open Report → Click "Create Report" → Download PDF.</p>
+    </div>
+
+    <div class="card">
+        <h3>➤ How to Upload Report?</h3>
+        <p>Go to Report section and select Saved Report.</p>
+    </div>
+
+    <div class="card">
+        <h3>➤ Contact Support</h3>
+        <p>Email: <span th:text="'dhavalevijay46@gmail.com'"></span></p>
+        <p>Phone: <span th:text="'+91 8380916639'"></span></p>
+    </div>
+
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Shiv Laboratories</h2>
+        <p class="copyright">
+            © 2026 Shiv Laboratories | Developed by Vijay Dhavale
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
